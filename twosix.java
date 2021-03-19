@@ -25,12 +25,12 @@ public class twosix {
         for (int i=0; i< value.length; i++){
         intValue[i]  = Integer.parseInt(value[i]);
         }
-        int max = 0;
+        int max = intValue[0];
         for (int i =0 ; i< value.length; i++){//max
 
             if (max < intValue[i]) { max = intValue[i];}
         }
-        int min = 100000000;
+        int min = intValue[0];
         for (int i =0 ; i< value.length; i++){//min
 
             if (min > intValue[i]) { min = intValue[i];}
@@ -57,12 +57,12 @@ public class twosix {
         intValue[0]=a;
         intValue[1]=b;
         intValue[2]=c;
-        int max = -100000000;
+        int max = intValue[0];
         for (int i =0 ; i< intValue.length; i++){//max
 
             if (max < intValue[i]) { max = intValue[i];}
         }
-        int min = 100000000;
+        int min = intValue[0];
         for (int i =0 ; i< intValue.length; i++){//min
 
             if (min > intValue[i]) { min = intValue[i];}
