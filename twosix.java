@@ -38,7 +38,7 @@ public class twosix {
         return Math.abs(max-min);
     }
     public static int equal(int a, int b, int c){//5
-        if ((a==b)&&(a==c)&&(b==c)){
+        if ((a==b)&&(a==c)){
             return 3;
         }
         else if ((a==b)||(a==c)||(b==c)){
