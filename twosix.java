@@ -35,7 +35,7 @@ public class twosix {
 
             if (min > intValue[i]) { min = intValue[i];}
         }
-        return max-min;
+        return Math.abs(max-min);
     }
     public static int equal(int a, int b, int c){//5
         if ((a==b)&&(a==c)&&(b==c)){
