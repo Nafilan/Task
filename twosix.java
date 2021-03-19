@@ -57,7 +57,7 @@ public class twosix {
         intValue[0]=a;
         intValue[1]=b;
         intValue[2]=c;
-        int max = 0;
+        int max = -100000000;
         for (int i =0 ; i< intValue.length; i++){//max
 
             if (max < intValue[i]) { max = intValue[i];}
