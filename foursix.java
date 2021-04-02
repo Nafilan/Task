@@ -119,9 +119,26 @@ public class foursix {
         return max;
     }
 
-    public static int code(int a){//7
+    public static int code(String a){//7
+        String [] value = a.split("");
+        String result = "";
+        String result1 = "";
+        String [] otherV = a.split("");
 
-        return a;
+        int[] num = new int[otherV.length] ;
+        Arrays.sort(otherV);
+        for(int i =0;i < otherV.length;i++){
+            num[i]=Integer.parseInt(otherV[i]);
+        }
+
+        for(int i =0;i < num.length;i++){
+            result1 += (""+value[i]);
+        }
+
+        for(int i =0;i < num.length;i++){
+            result += (""+num[i]);
+        }
+        return Integer.parseInt((result1))-Integer.parseInt((result));
     }
 
     public static String commonLastVowel(String a){//8
@@ -245,10 +262,10 @@ public class foursix {
                 System.out.print("" + largestGap(gap));
                 break;
             case 7:
-                System.out.print("Enter numbers to sort and find the largest gap: ");
+                System.out.print("Enter a number: ");
                 String code = sc.nextLine();
                 code = sc.nextLine();
-                System.out.print("" + largestGap(code));
+                System.out.print("" + code(code));
                 break;
             case 8:
                 System.out.print("Enter a sentence: ");
