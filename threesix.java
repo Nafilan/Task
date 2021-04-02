@@ -31,39 +31,19 @@ public class threesix {
         String wincon2 = "Player 1 wins !";
         String wincon3 = "Player 2 wins !";
         String result = "";
-        if (a.toLowerCase(Locale.ROOT).equals("scissors") ){//big 1/3
-            if (b.toLowerCase(Locale.ROOT).equals("scissors")){// 1/3
-                result = wincon1;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("paper")){// 2/3
-                result = wincon2;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("rock")) { // 3/3
-                result = wincon3;
-            }
+        String lowa = a.toLowerCase(Locale.ROOT);
+        String lowb = b.toLowerCase(Locale.ROOT);
+        if (a.toLowerCase(Locale.ROOT).equals(b.toLowerCase(Locale.ROOT)) ){//big 1/3
+            result = wincon1;
         }
-        else if (a.toLowerCase(Locale.ROOT).equals("paper")){//big 2/3
-            if (b.toLowerCase(Locale.ROOT).equals("scissors")){// 1/3
-                result = wincon3;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("paper")){// 2/3
-                result = wincon1;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("rock")) {// 3/3
-                result = wincon2;
-            }
+        else if ((lowa.equals("paper")&&lowb.equals("rock"))||(lowa.equals("scissors")&&lowb.equals("paper"))||
+                (lowa.equals("rock")&&lowb.equals(("scissors")))){//big 2/3
+            result = wincon2;
         }
-        else if (a.toLowerCase(Locale.ROOT).equals("rock")){//big 3/3
-            if (b.toLowerCase(Locale.ROOT).equals("scissors")){// 1/3
-                result = wincon2;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("rock")){// 2/3
-                result = wincon1;
-            }
-            else if (b.toLowerCase(Locale.ROOT).equals("paper")) {// 3/3
-                result = wincon3;
-            }
+        else {
+            result = wincon3;
         }
+
         return result;
     }
 
@@ -126,7 +106,15 @@ public class threesix {
         int c = arr[2];
         int w = arr[3];
         int h = arr[4];
-        if ((a*b==w*h)||(c*b==w*h)||(a*c==w*h)){
+
+      //  ((a*b==w*h)&&(c*b==w*h)&&(a*c==w*h));
+        if (((a==w||a==h))&&((b==w)||(b==h))){
+            return true;
+        }
+        else if (((a==w||a==h))&&((c==w)||(c==h))) {
+            return true;
+        }
+        else if (((b==w)||(b==h))&&((c==w)||(c==h))) {
             return true;
         }
         else return false;
