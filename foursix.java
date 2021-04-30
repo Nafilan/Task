@@ -138,6 +138,9 @@ public class foursix {
         for(int i =0;i < num.length;i++){
             result += (""+num[i]);
         }
+
+
+
         return Integer.parseInt((result1))-Integer.parseInt((result));
     }
 
@@ -265,6 +268,7 @@ public class foursix {
                 System.out.print("Enter a number: ");
                 String code = sc.nextLine();
                 code = sc.nextLine();
+
                 System.out.print("" + code(code));
                 break;
             case 8:
